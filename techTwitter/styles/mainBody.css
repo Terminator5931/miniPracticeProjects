@@ -1,0 +1,79 @@
+.typeSomething {
+  margin-left: 10px;
+  padding-top: 4px;
+  height: 145px;
+  /* background-color: lightgreen; */
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  /* column-gap: 10px; */
+}
+.typeSomethingImageDiv {
+  width: 50px;
+}
+.typeSomethingContent {
+  display: flex;
+  flex-direction: column;
+}
+.inputPara {
+  height: 85px;
+}
+.inputPara input {
+  margin-top: 2px;
+  font-size: 17px;
+  height: 50px;
+  width: 514px;
+  padding-left: 8px;
+  border-style: none;
+}
+.inputPara button {
+  font-size: 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.typeSomethingContentIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid;
+  border-width: 1px;
+  width: 468px;
+  height: 50px;
+}
+.ic {
+  /* background-color: lightblue; */
+  display: flex;
+  flex-direction: row;
+  /* display: inline; */
+}
+.ic-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  position: relative;
+}
+.ic-Container:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 20px;
+}
+.butt button {
+  display: inline;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px 8px 16px;
+  border: none;
+  border-radius: 19px;
+}
+/* posts counter */
+.postsCounter {
+    display: flex;
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+}
+.postsCounter p{
+  display: inline;
+}

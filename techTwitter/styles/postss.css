@@ -1,0 +1,88 @@
+.frstpost {
+  display: flex;
+  flex-direction: row;
+}
+.twitter-author {
+  height: 35px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.twitter-author .twitter-authorTooltip {
+  position: absolute;
+  border-radius: 10px;
+  background-color: white;
+  top: 50px;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.twitter-author:hover .twitter-authorTooltip {
+  opacity: 1;
+}
+.twitter-authorTooltipContent {
+  margin: 10px 10px;
+  padding: 10px;
+  width: 250px;
+  background-color: white;
+}
+.twitter-authorTooltipContent button{
+  border: none;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+.twitter-author img,
+.twitter-authorTooltip img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.frstpostContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 5px;
+}
+.frstpostContent-head {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.frstpostContent-body {
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.frstpost-footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.frstpost-footer-icons-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.frstpost-footer-icons-layout-hover-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 14px;
+  position: relative;
+}
+.frstpost-footer-icons-layout-hover-box:hover .lSidebarTooltip {
+  opacity: 1;
+}
+.frstpost-footer-icons-layout-hover-box:hover {
+  background-color: lightblue;
+}
+.upload-icons-footer {
+  margin-right: 10px;
+  display: flex;
+  flex: row;
+}

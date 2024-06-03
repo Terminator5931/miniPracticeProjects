@@ -1,0 +1,89 @@
+.rSidebar {
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  right: 0;
+  width: 455px;
+}
+.rSidebarContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-left: 30px;
+  width: 318px;
+}
+.block-1 {
+  margin-top: 9px;
+  padding: 12px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 10px;
+}
+.subscribePremium p {
+  display: inline-block;
+  margin: 0;
+  width: 295x;
+}
+.subscribePremium button {
+  background-color: rgb(15, 20, 25);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.subscribePremium button:hover {
+  opacity: 0.8;
+}
+
+.block-2 {
+  border: solid;
+  border-width: 1px;
+  border-radius: 10px;
+}
+.block-2Content {
+  display: flex;
+  flex-direction: column;
+}
+.block-2ContentPosts {
+  position: relative;
+  padding: 12px 16px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.block-2ContentPosts:hover,
+.rSidebarContentLst:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+.block-2ContentPosts p {
+  margin: 0;
+}
+.block-2ContentPostsMoreTooltip {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+/* posts editing */
+.upperPost {
+  font-size: 13px;
+}
+.middlePost {
+  font-size: 14px;
+  font-weight: bold;
+}
+.lowerPost {
+  font-size: 13px;
+}
+.rSidebarContentLst {
+  height: 30px;
+  padding-top: 10px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.block-3Content {
+  padding: 10px;
+}
+.block-3 p {
+  font-size: 13px;
+}

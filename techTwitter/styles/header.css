@@ -1,0 +1,103 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 100px;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* background-color: lightblue; */
+  z-index: 100;
+  height: 50px;
+}
+/* header icon */
+.header-icon {
+  font-size: 28px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 27px;
+}
+.headerContainer {
+  font-weight: 500;
+  border-left: solid;
+  border-right: solid;
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* header button */
+.headerButton1 {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 235px;
+  transition: background-color 0.4s;
+}
+.headerButton1:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+.headerButton2 {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 255px;
+  transition: background-color 0.4s;
+}
+.headerButton2:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+.header-setting-gearboxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+  width: 37px;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+  position: relative;
+}
+.header-setting-gearboxContainer:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+/* searchbar */
+.search-barDiv {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  margin-left: 28px;
+  margin-top: 2px;
+  position: relative;
+}
+.search-bar {
+  height: 40px;
+  width: 266px;
+  border: solid;
+  border-radius: 30px;
+  border-width: 1px;
+  /* margin-right: 70px; */
+  padding-left: 45px;
+}
+.search-barTooltip {
+  width: 315px;
+  height: 95px;
+    position: absolute;
+    background-color: white;
+    left: 2px;
+    bottom: -90px;
+    border-radius: 10px;
+    opacity: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+.search-barDiv:hover .search-barTooltip {
+    opacity: 1;
+}
+.search-barTooltip p {
+    color: rgb(83, 100, 113);
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+}

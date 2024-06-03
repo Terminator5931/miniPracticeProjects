@@ -1,0 +1,137 @@
+.lSidebar {
+  position: fixed;
+  top: 50px;
+  left: 100px;
+  bottom: 0;
+  width: 66px;
+  align-items: center;
+  z-index: 2;
+}
+
+.lSidebar i {
+  font-size: 22px;
+}
+.lSidebarMainDiv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 30px;
+  position: relative;
+}
+/* tooltip */
+/* .lSidebarTooltip p {
+    display: inline;
+} */
+.lSidebarTooltip {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  font-weight: 100;
+  border: solid;
+  padding: 2px 3px;
+  border-width: 1px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -20px;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  white-space: nowrap;
+}
+.sidebar-link:hover .lSidebarTooltip,
+.header-setting-gearboxContainer:hover .lSidebarTooltip {
+  opacity: 1;
+}
+.sidebar-link:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+/* last two of them */
+.lSidebarBottomDiv {
+  height: 140px;
+  display: flex;
+  justify-content: center;
+}
+.sidebar-linkPostAcc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: lightblue; */
+}
+.sidebar-linkPostAcc-PostBox {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(46, 130, 158);
+  position: relative;
+}
+.sidebar-linkPostAcc-PostBox-tooltip {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  font-weight: 100;
+  border: solid;
+  padding: 2px 3px;
+  border-width: 1px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -24px;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+.sidebar-linkPostAcc-PostBox:hover .sidebar-linkPostAcc-PostBox-tooltip {
+  opacity: 1;
+}
+.sidebar-linkPostAcc-Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+  position: relative;
+}
+.sidebar-linkPostAcc-Box-tooltip {
+  position: absolute;
+  top: -20px;
+  border-radius: 2px;
+  padding: 2px 3px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  font-weight: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+.sidebar-linkPostAcc-Box:hover .sidebar-linkPostAcc-Box-tooltip {
+  opacity: 1;
+}
+.sidebar-linkPostAcc-Box:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+.sidebar-linkPostAcc-Box img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
