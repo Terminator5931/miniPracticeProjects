@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .grid-item {
+      height: calc(600px/32 - 1px);
+      width: calc(600px/32);
+    }
+
+    .grid-container {
+      width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      /* gap: 1px; */
+    }
+  </style>
+</head>
+
+<body>
+  <p>Etch A Sketch</p>
+  <div class="grid-container">
+  </div>
+  <button>Remove</button>
+  <script>
+    let bc = ['red', 'green', 'blue'];
+    const a = document.querySelector(".grid-container");
+    const b = document.querySelector("button");
+    b.addEventListener('click', () => {
+      while (a.firstChild) {
+        a.removeChild(a.firstChild);
+      }
+    });
+    for (let i = 0; i < 1024; i++) {
+      let div = document.createElement("div");
+      // div.style.display = flex;
+      div.classList.add('grid-item');
+      div.style.backgroundColor = 'lightblue';
+      a.appendChild(div);
+    }
+    let c = document.querySelectorAll('.grid-item');
+    c.forEach(e => {
+      e.addEventListener('mouseover', () => {
+        e.style.backgroundColor = 'orange';
+      });
+    });
+  </script>
+</body>
+
+</html>

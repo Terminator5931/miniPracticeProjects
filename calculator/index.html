@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="display">
+      <ul>
+        <li class="a overflowing"></li>
+      </ul>
+    </div>
+    <div id="buttonsContainer">
+      <button id="clear">AC</button>
+      <button>+/-</button>
+      <button>%</button>
+      <button class="opr" id="div">/</button>
+      <button class="num">7</button>
+      <button class="num">8</button>
+      <button class="num">9</button>
+      <button class="opr" id="mul">*</button>
+      <button class="num">6</button>
+      <button class="num">5</button>
+      <button class="num">4</button>
+      <button class="opr" id="subs">-</button>
+      <button class="num">3</button>
+      <button class="num">2</button>
+      <button class="num">1</button>
+      <button class="opr" id="plus">+</button>
+      <button class="zero num">0</button>
+      <button id="dot">.</button>
+      <button onclick="operate()">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
