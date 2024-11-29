@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Test Page</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+    }
+
+    div:nth-child(1) {
+      margin-top: 20vh;
+      font-size: 48px;
+    }
+
+     #about{
+      background-color: goldenrod;
+      padding: 20px;
+      border-radius: 30px;
+      width: 70vw;
+      font-size: larger;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>Overview of My Chatbot Project</p>
+  </div>
+  <div id="about">
+    <p>
+      This project features a conversational chatbot designed to simulate natural human interactions while providing
+      intelligent and context-aware responses. Built using advanced algorithms and leveraging techniques like natural
+      language processing (NLP) and machine learning, the chatbot can understand user input, manage multi-turn
+      conversations, and offer personalized assistance. With a user-friendly interface, the bot is tailored for
+      applications such as customer support, virtual assistants, or educational tools. It stands out for its
+      adaptability, scalability, and seamless integration into various platforms.
+    </p>
+  </div>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "495161ec-cd43-48e8-b17a-f0608167d6e4", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "a9adfdbe-b334-4921-a879-54fbf2ea7d6b", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function () {
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+
+</html>
