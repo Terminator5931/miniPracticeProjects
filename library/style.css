@@ -1,8 +1,36 @@
+body{
+  background-color: goldenrod;
+}
 .top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
   /*justify-content: center;*/
+}
+
+form {
+  display: inline-block;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+}
+
+label {
+  text-align: right;
+  display: inline-block;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, text areas have a monospace font */
+  font: 1em sans-serif;
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+  /* Match form field borders */
+  border: 1px solid #999;
 }
 
 /*BOTTOM CLASS*/

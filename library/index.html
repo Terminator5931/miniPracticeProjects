@@ -7,24 +7,39 @@
   <link href="style.css" rel="stylesheet">
 </head>
 
-<body style="background-color: lightblue">
+<body>
   <div class="top">
     <p>Books Library</p>
     <button class="addon">Add New</button>
   </div>
-  <dialog id="dialog">
-    <button formmethod="dialog" value="cancel" class="cl">close</button>
+  <dialog>
+    <button value="cancel" class="cl">close</button>
     <form method="dialog">
-      <label for="bookName">Name: <input type="text" id="bookName" name="bookName"></label>
-      <label for="author">Author: <input type="text" id="author" name="author"></label>
-      <label for="pages">No of Pages: <input type="text" id="pages" name="pages"></label>
-      <label for="stat">Status: <input type="text" id="stat" name="stat"></label>
+      <p>
+        <label for="bookName">
+          Name: <input type="text" id="bookName" name="bookName">
+        </label>
+      </p>
+      <p>
+        <label for="author">Author:
+          <input type="text" id="author" name="author">
+        </label>
+      </p>
+      <p>
+        <label for="pages">
+          Pages: <input type="text" id="pages" name="pages">
+        </label>
+      </p>
+      <p>
+        <label for="stat">Status:
+          <input type="checkbox" id="stat" name="stat" value="checked">
+        </label>
+      </p>
       <button class="submit" type="submit">Submit</button>
     </form>
   </dialog>
   <div class="bottom outputBox">
   </div>
-
   <script src="script.js"></script>
 </body>
 

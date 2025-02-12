@@ -1,67 +1,67 @@
-const addNewBtn = document.querySelector('button.addon');
-const dialog = document.querySelector('#dialog');
-const outputBox = document.querySelector('.outputBox');
-addNewBtn.addEventListener('click', () => {
+const dialog = document.querySelector('dialog');
+dialog.showModal();
+const addon = document.querySelector('.addon');
+const bottom = document.querySelector('.bottom');
+
+// event listeners
+dialog.querySelector('button.cl').addEventListener('click', () => {
+  dialog.close();
+});
+addon.addEventListener('click', () => {
   dialog.showModal();
 });
-// close btn
-document.querySelector('dialog button.cl').addEventListener('click', () => {
-  dialog.close();
-});
-dialog.querySelector('form button.submit').addEventListener('click', (e) => {
+dialog.addEventListener('submit', (e) => {
   e.preventDefault();
-  const labels = document.querySelectorAll('input');
-  const ans = [];
-  labels.forEach(input => {
-    ans.push(input.value);
-  });
-  dialog.close();
-  const book = new Book(ans[0], ans[1], ans[2], ans[3]);
-  myLibrary.push(book);
-  ans.length = 0;
-  addBookToLibrary();
+  let name = dialog.querySelector('label #bookName').value;
+  let author = dialog.querySelector('label #author').value;
+  let pages = dialog.querySelector('label #pages').value;
+  let status = dialog.querySelector('label #stat').checked ? 1 : 0;
+  addBookToLibrary(name, author, pages, status);
 });
+
 const myLibrary = [];
 
-function Book(bookName, author, pages, stat) {
-  this.bookName = bookName, this.author = author, this.pages = pages, this.stat = stat;
+class Book {
+  // the constructor...
+  constructor(name, author, pages, status) {
+    this.name = name;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+  }
 }
 Book.prototype.flipStatus = function() {
-  if (this.stat === 'read') {
-    this.stat = 'unread';
+  this.status = !this.status;
+}
+function addBookToLibrary(name, author, pages, status) {
+  let book = new Book(name, author, pages, status);
+  myLibrary.push(book);
+  bottom.innerHTML = "";
+  render();
+}
+function render() {
+  for (let i = 0; i < myLibrary.length; i++) {
+    let div = document.createElement('div');
+    div.innerHTML = `
+<p>Name: ${myLibrary[i].name}</p>
+<p>Author: ${myLibrary[i].author}</p>
+<p>Pages: ${myLibrary[i].pages}</p>
+<p>Status: ${myLibrary[i].status ? "Read" : "Unread"}</p>
+<button onclick="bookChangeStat(${i})">Change Status</button>
+<button onclick="bookRemoval(${i})">Delete</button>
+`;
+    bottom.appendChild(div);
   }
-  else this.stat = 'read';
 }
-
-function addBookToLibrary() {
-  // take reference
-  const div = document.createElement('div');
-  const frst = document.createElement('p');
-  frst.textContent = `Book Name: ${myLibrary[myLibrary.length - 1].bookName}`;
-  const scnd = document.createElement('p');
-  scnd.textContent = `Book Author: ${myLibrary[myLibrary.length - 1].author}`;
-  const thrd = document.createElement('p');
-  thrd.textContent = `No of Pages: ${myLibrary[myLibrary.length - 1].pages}`;
-  const frth = document.createElement('p');
-  frth.textContent = `Status : ${myLibrary[myLibrary.length - 1].stat}`;
-  div.appendChild(frst);
-  div.appendChild(scnd);
-  div.appendChild(thrd);
-  div.appendChild(frth);
-  // adding remove event listener
-  const btn = document.createElement('button');
-  btn.textContent = 'deconste';
-  btn.addEventListener('click', () => {
-    outputBox.removeChild(div);
-  });
-  div.appendChild(btn);
-  const btnRead = document.createElement('button');
-  div.appendChild(btnRead);
-  btnRead.textContent = 'toggle status';
-  btnRead.addEventListener('click', () => {
-    // call prototype func
-  });
-  outputBox.appendChild(div);
+// task 5
+function bookRemoval(idx) {
+  myLibrary.splice(idx, 1);
+  bottom.innerHTML = "";
+  render();
 }
-
-// task3 now adding a flipStatus func to flip status of reading
+// task 6
+function bookChangeStat(idx) {
+  myLibrary[idx].status = myLibrary[idx].status ? 0 : 1;
+  bottom.innerHTML = "";
+  render();
+}
