@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="style.css" rel="stylesheet">
+
+<body>
+  <dialog id="selMark">
+    <form>
+      <div>
+        <label for="label-select">Select Player 1's Marker:
+          <select id="label-select" name="marker">
+            <option>X</option>
+            <option>O</option>
+          </select>
+        </label>
+      </div>
+      <button class="close" type="button">Close</button>
+      <button class="submit" type="submit">Start Game</button>
+    </form>
+  </dialog>
+  <dialog id="result">
+    <form>
+      <div id="hellowinner">
+      </div>
+    </form>
+  </dialog>
+  <div id="board">
+  </div>
+  <script defer src="script.js"></script>
+</body>
+
+</html>

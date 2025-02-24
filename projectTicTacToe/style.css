@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#board {
+  height: 60vh;
+  width: 35vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.min-boxes {
+  background-color: yellowgreen;
+  border-radius: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#selMark{
+  border-style: none;
+  
+}
+.noClick{
+  pointer-events: none;
+  /*opacity: 0;*/
+}
+/*#board:nth-child(1){*/
+/*.min-boxes-1{*/
+/*  border-top-left-radius: 20px;*/
+/*}*/
+/*.cross-mark{*/
+/*}*/
