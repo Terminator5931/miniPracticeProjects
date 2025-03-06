@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  height: 9vh;
+  align-items: baseline;
+  justify-content: center;
+  /*margin: 1em auto;*/
+  background-color: goldenrod;
+}
+
+nav {
+  margin: 1em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.menuitem>table {
+  border-spacing: 0.5rem;
+  margin: 0 auto;
+  font-size: 2em;
+  border: 1px solid #999;
+  border-collapse: collapse;
+}
+
+.menuitem table>th,
+td {
+  border: 1px solid grey;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* about */
+.about h1{
+  text-align: center;
+}
+.about .content,
+.contact .content{
+  margin: 0 auto;
+  height: 25em;
+  width: 35vw;
+  background-color: red;
+  padding: 2em;
+}
+.about .content li{
+  margin: 3em 0;
+}
+li {
+  list-style-type:none;
+}
+/*contact*/
+.contact h1{
+  text-align: center;
+}
