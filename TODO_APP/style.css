@@ -20,3 +20,6 @@ body {
   /*background-color: black;*/
   height: 100%;
 }
+.checkedBox {
+  text-decoration: line-through;
+}
