@@ -49,18 +49,15 @@ const mainPageCompeonents = (function () {
     }
   }
   function populateTasks(project = "default") {
-    console.log(`Project name is ${project}`)
     let currentTable = JSON.parse(localStorage.getItem(`${project}`)),
       contentDiv = document.querySelector("#right .content");
+    // here first p is default heading title
     contentDiv.innerHTML = `
 <p><span>title</span><span>description</span><span>priority</span></p>
 `;
     if (currentTable) {
-      console.log(currentTable, "And last clicked is " + jsonData.lastClicked.name);
-      console.table()
       currentTable.forEach((element) => {
         // title description priority
-        console.log(`Element is from home.js currentTable\n${element}`)
         contentDiv.innerHTML += `<p><input type="checkbox" ${project == "completed" ? "checked" : ""}><span>${element.title}</span>
 <span>${element.description}</span>
 <span>${element.priority}</span>

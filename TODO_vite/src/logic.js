@@ -13,7 +13,6 @@ const logic = (() => {
     inputBox.removeChild(inputBox.children[idx + 1]);
     // let temp = 
     completedTasksData.push(currentTable.splice(idx, 1)[0]);
-    console.table("completedTasks data is \n",completedTasksData);
     jsonData.setTable("completed", completedTasksData);
     jsonData.setTable("default", currentTable);
   }
